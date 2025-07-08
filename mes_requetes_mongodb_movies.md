@@ -10,6 +10,7 @@ Dans le cadre de ma formation en science des données appliquées, j’ai pratiq
 ```javascript
 show dbs// voir toutes les bases disponibles
 ###   Résultat:
+```javascript
 College       8.00 KiB
 admin        40.00 KiB
 angelguems   12.34 MiB
@@ -22,11 +23,14 @@ produits     24.00 KiB
 ua2          48.00 KiB
 
 ###  Sélection de la base angelguems
+```javascript
 use angelguems
 
 ###  Vérification des collections disponibles
+```javascript
 show collections
 ###  Résultat :
+```javascript
 movies
 
 ##  Requêtes MongoDB sur la collection movies
