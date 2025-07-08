@@ -9,6 +9,8 @@ Dans le cadre de ma formation en science des données appliquées, j’ai pratiq
 ##  Liste des bases disponibles
 ```javascript
 show dbs// voir toutes les bases disponibles
+---
+
 ###   Résultat:
 ```javascript
 College       8.00 KiB
@@ -21,14 +23,15 @@ local        72.00 KiB
 premierP      8.00 KiB
 produits     24.00 KiB
 ua2          48.00 KiB
+---
 
 ###  Sélection de la base angelguems
 ```javascript
 use angelguems
-
+---
 ###  Vérification des collections disponibles
 ```javascript
-show collections
+show collections---
 ###  Résultat :
 ```javascript
 movies
