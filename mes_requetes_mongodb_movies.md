@@ -5,11 +5,14 @@ Aujourd’hui, j’explore la base de données `angelguems` et sa collection `mo
 
 ---
 
-## Connexion à la base de données
+##  Connexion à la base de données
 
 ###  Lister toutes les bases disponibles
 ```javascript
 show dbs
+```
+### Résultat attendu :
+
 College       8.00 KiB
 admin        40.00 KiB
 angelguems   12.34 MiB
@@ -20,27 +23,63 @@ local        72.00 KiB
 premierP      8.00 KiB
 produits     24.00 KiB
 ua2          48.00 KiB
-Utiliser la bases de données "angelguems"
+#### Sélectionner la base angelguems
+```JavaScript
 use angelguems
-voir les collections de cette base de données 
+```
+ #### Vérifier les collections disponibles
+```JavaScript
+
 show collections
+```
+### Résultat :
+
 movies
-Affiche les 5 premiers films dans la collection.
+ ## Requêtes MongoDB sur la collection movies
+#### 1. Afficher les 5 premiers documents
+```JavaScript
 db.movies.find().limit(5)
-Récupèrer uniquement les titres des films sans afficher l'ID
+```
+#### 2. Lister tous les titres des films
+```JavaScript
+
 db.movies.find({}, { title: 1, _id: 0 })
-Obtenir le nombre total d'enregistrements dans la collection movies
+```
+#### 3. Compter le nombre total de films
+```JavaScript
+
 db.movies.countDocuments()
-Trouver les filmer sortis après 2015
+```
+#### 4. Trouver les films sortis après 2015
+```JavaScript
+
 db.movies.find({ year: { $gt: 2015 } })
-lister tous les fims du genre "comedie"
+```
+#### 5. Lister tous les films du genre "Comédie"
+```JavaScript
+
 db.movies.find({ genres: "Comedy" })
-Lister les films par ordre decroissant d'année de publication
+```
+#### 6. Trier les films par année décroissante
+```JavaScript
+
 db.movies.find().sort({ year: -1 })
-Afficher les films avec une note superieure à 8
+```
+#### 7. Afficher les films avec une note supérieure à 8
+```JavaScript
+
 db.movies.find({ rating: { $gt: 8 } })
-Afficher uniquement les films et les annees des films sans le "_id"
+```
+#### 8. Afficher uniquement les titres et les années (sans l'ID)
+```JavaScript
+
 db.movies.find({}, { title: 1, year: 1, _id: 0 })
+```
+## Conclusion
+
+Ces requêtes simples m'ont permis de manipuler une base de données NoSQL, de filtrer, trier et analyser les informations issues d'une collection MongoDB.  
+Elles illustrent les bases essentielles de l’interrogation de données dans un environnement orienté document.
+Cette exploration est une première étape vers une maîtrise plus approfondie des bases de données NoSQL.
 
 
 
