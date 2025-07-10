@@ -10,6 +10,7 @@ Aujourd’hui, j’explore la base de données `angelguems` et sa collection `mo
 ###  Lister toutes les bases disponibles
 ```javascript
 show dbs
+```
 Résultat attendu :
 
 College       8.00 KiB
