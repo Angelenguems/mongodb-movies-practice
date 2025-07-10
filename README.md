@@ -5,9 +5,9 @@ Aujourd’hui, j’explore la base de données `angelguems` et sa collection `mo
 
 ---
 
-## 🔗 Connexion à la base de données
+##  Connexion à la base de données
 
-### 🔍 Lister toutes les bases disponibles
+###  Lister toutes les bases disponibles
 ```javascript
 show dbs
 Résultat attendu :
